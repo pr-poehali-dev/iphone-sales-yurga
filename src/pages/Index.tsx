@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -71,6 +71,15 @@ const products = [
 export default function Index() {
   const [activeTab, setActiveTab] = useState('all');
   const [tradeInValue, setTradeInValue] = useState('');
+  const [showWelcome, setShowWelcome] = useState(false);
+
+  useEffect(() => {
+    setShowWelcome(true);
+    const timer = setTimeout(() => {
+      setShowWelcome(false);
+    }, 4000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const filteredProducts = activeTab === 'all' 
     ? products 
@@ -78,6 +87,15 @@ export default function Index() {
 
   return (
     <div className="min-h-screen bg-background">
+      {showWelcome && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-background/80 backdrop-blur-sm animate-fade-in">
+          <div className="bg-card border border-primary/50 rounded-2xl p-8 max-w-md mx-4 shadow-2xl shadow-primary/20 animate-slide-up">
+            <p className="text-2xl md:text-3xl font-bold text-center leading-relaxed">
+              Пока Адам искушается Яблоком, - <span className="text-primary">Я им владею</span>
+            </p>
+          </div>
+        </div>
+      )}
       <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
