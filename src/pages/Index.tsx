@@ -4,6 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Icon from '@/components/ui/icon';
+import iPhone3D from '@/components/iPhone3D';
 
 const products = [
   {
@@ -155,13 +156,9 @@ export default function Index() {
             </div>
             
             <div className="hidden md:flex justify-center items-center">
-              <div className="relative w-64 h-96 animate-fade-in" style={{ animationDelay: '300ms' }}>
-                <img 
-                  src="https://cdn.poehali.dev/projects/bbce6d25-a3cd-4806-a43b-d0e7f87ffdf0/files/0ad1be34-f72e-4b70-a1eb-304b62fa26e4.jpg"
-                  alt="iPhone 13"
-                  className="w-full h-full object-contain animate-rotate3d drop-shadow-2xl"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent blur-3xl -z-10" />
+              <div className="relative w-full h-[500px] animate-fade-in" style={{ animationDelay: '300ms' }}>
+                <iPhone3D />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent blur-3xl -z-10 pointer-events-none" />
               </div>
             </div>
           </div>
