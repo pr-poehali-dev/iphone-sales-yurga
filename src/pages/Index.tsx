@@ -92,9 +92,11 @@ export default function Index() {
               <a href="#trade-in" className="text-sm hover:text-primary transition-colors">Trade-in</a>
               <a href="#contacts" className="text-sm hover:text-primary transition-colors">Контакты</a>
             </nav>
-            <Button className="gap-2">
-              <Icon name="Phone" size={16} />
-              Позвонить
+            <Button className="gap-2" asChild>
+              <a href="https://t.me/iphoneyurga" target="_blank" rel="noopener noreferrer">
+                <Icon name="MessageCircle" size={16} />
+                Написать в Telegram
+              </a>
             </Button>
           </div>
         </div>
@@ -189,9 +191,11 @@ export default function Index() {
                     <div>
                       <p className="text-2xl font-bold text-primary">{product.price} ₽</p>
                     </div>
-                    <Button className="gap-2">
-                      <Icon name="ShoppingBag" size={16} />
-                      Купить
+                    <Button className="gap-2" asChild>
+                      <a href={`https://t.me/iphoneyurga?text=Здравствуйте! Интересует ${product.name} ${product.storage}`} target="_blank" rel="noopener noreferrer">
+                        <Icon name="MessageCircle" size={16} />
+                        Купить
+                      </a>
                     </Button>
                   </div>
                 </CardContent>
@@ -258,9 +262,11 @@ export default function Index() {
                     ))}
                   </div>
 
-                  <Button className="w-full gap-2" size="lg">
-                    <Icon name="Phone" size={20} />
-                    Записаться на оценку
+                  <Button className="w-full gap-2" size="lg" asChild>
+                    <a href="https://t.me/iphoneyurga?text=Здравствуйте! Хочу оценить мой iPhone по Trade-in" target="_blank" rel="noopener noreferrer">
+                      <Icon name="MessageCircle" size={20} />
+                      Написать в Telegram
+                    </a>
                   </Button>
                 </div>
               </CardContent>
@@ -297,6 +303,16 @@ export default function Index() {
                       </div>
                     </div>
                     
+                    <div className="flex gap-4">
+                      <Icon name="MessageCircle" className="text-primary flex-shrink-0" size={24} />
+                      <div>
+                        <p className="font-medium">Telegram</p>
+                        <a href="https://t.me/iphoneyurga" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                          @iphoneyurga
+                        </a>
+                      </div>
+                    </div>
+
                     <div className="flex gap-4">
                       <Icon name="Phone" className="text-primary flex-shrink-0" size={24} />
                       <div>
@@ -345,9 +361,11 @@ export default function Index() {
                         className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary focus:outline-none transition-colors resize-none"
                       />
                     </div>
-                    <Button className="w-full gap-2" size="lg">
-                      <Icon name="Send" size={20} />
-                      Отправить
+                    <Button className="w-full gap-2" size="lg" asChild>
+                      <a href="https://t.me/iphoneyurga" target="_blank" rel="noopener noreferrer">
+                        <Icon name="MessageCircle" size={20} />
+                        Написать в Telegram
+                      </a>
                     </Button>
                   </form>
                 </CardContent>
@@ -368,10 +386,7 @@ export default function Index() {
               © 2024 iPhone Юрга. Все права защищены.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Icon name="Instagram" size={20} />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://t.me/iphoneyurga" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Icon name="MessageCircle" size={20} />
               </a>
             </div>
