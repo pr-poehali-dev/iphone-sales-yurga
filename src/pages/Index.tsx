@@ -107,9 +107,14 @@ export default function Index() {
       <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <Icon name="Smartphone" className="text-primary" size={28} />
-              <h1 className="text-2xl font-bold glass-text">iPhone Юрга</h1>
+            <div className="flex items-center gap-4">
+              <div className="w-16 h-16 hidden lg:block">
+                <iPhone3D />
+              </div>
+              <div className="flex items-center gap-2">
+                <Icon name="Smartphone" className="text-primary lg:hidden" size={28} />
+                <h1 className="text-2xl font-bold glass-text">iPhone Юрга</h1>
+              </div>
             </div>
             <nav className="hidden md:flex gap-6">
               <a href="#catalog" className="text-sm hover:text-primary transition-colors">Каталог</a>
