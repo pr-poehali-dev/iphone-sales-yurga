@@ -72,13 +72,20 @@ export default function Index() {
   const [activeTab, setActiveTab] = useState('all');
   const [tradeInValue, setTradeInValue] = useState('');
   const [showWelcome, setShowWelcome] = useState(false);
+  const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
     setShowWelcome(true);
-    const timer = setTimeout(() => {
+    const fadeTimer = setTimeout(() => {
+      setFadeOut(true);
+    }, 3500);
+    const hideTimer = setTimeout(() => {
       setShowWelcome(false);
     }, 4000);
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(fadeTimer);
+      clearTimeout(hideTimer);
+    };
   }, []);
 
   const filteredProducts = activeTab === 'all' 
@@ -88,8 +95,8 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-background">
       {showWelcome && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-background/80 backdrop-blur-sm animate-fade-in">
-          <div className="bg-card border border-primary/50 rounded-2xl p-8 max-w-md mx-4 shadow-2xl shadow-primary/20 animate-slide-up">
+        <div className={`fixed inset-0 z-[100] flex items-center justify-center bg-background/80 backdrop-blur-sm transition-opacity duration-500 ${fadeOut ? 'opacity-0' : 'opacity-100 animate-fade-in'}`}>
+          <div className={`bg-card border border-primary/50 rounded-2xl p-8 max-w-md mx-4 shadow-2xl shadow-primary/20 transition-all duration-500 ${fadeOut ? 'opacity-0 scale-95' : 'opacity-100 animate-slide-up'}`}>
             <p className="text-2xl md:text-3xl font-bold text-center leading-relaxed">
               Пока Адам искушается Яблоком, - <span className="text-primary">Я им владею</span>
             </p>
