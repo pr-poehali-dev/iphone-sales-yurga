@@ -130,26 +130,39 @@ export default function Index() {
       <section className="relative py-20 md:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent" />
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl animate-fade-in">
-            <Badge className="mb-4 bg-primary/20 text-primary border-primary/30">
-              Официальный магазин в Юрге
-            </Badge>
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Новые и б/у iPhone<br />
-              <span className="text-primary">с гарантией</span>
-            </h2>
-            <p className="text-xl text-muted-foreground mb-8">
-              Широкий выбор iPhone всех моделей. Trade-in вашего старого устройства. Доставка по Юрге бесплатно.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="gap-2">
-                <Icon name="ShoppingCart" size={20} />
-                Смотреть каталог
-              </Button>
-              <Button size="lg" variant="outline" className="gap-2">
-                <Icon name="ArrowRightLeft" size={20} />
-                Оценить Trade-in
-              </Button>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="max-w-3xl animate-fade-in">
+              <Badge className="mb-4 bg-primary/20 text-primary border-primary/30">
+                Официальный магазин в Юрге
+              </Badge>
+              <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                Новые и б/у iPhone<br />
+                <span className="text-primary">с гарантией</span>
+              </h2>
+              <p className="text-xl text-muted-foreground mb-8">
+                Широкий выбор iPhone всех моделей. Trade-in вашего старого устройства. Доставка по Юрге бесплатно.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Button size="lg" className="gap-2">
+                  <Icon name="ShoppingCart" size={20} />
+                  Смотреть каталог
+                </Button>
+                <Button size="lg" variant="outline" className="gap-2">
+                  <Icon name="ArrowRightLeft" size={20} />
+                  Оценить Trade-in
+                </Button>
+              </div>
+            </div>
+            
+            <div className="hidden md:flex justify-center items-center">
+              <div className="relative w-64 h-96 animate-fade-in" style={{ animationDelay: '300ms' }}>
+                <img 
+                  src="https://cdn.poehali.dev/projects/bbce6d25-a3cd-4806-a43b-d0e7f87ffdf0/files/0ad1be34-f72e-4b70-a1eb-304b62fa26e4.jpg"
+                  alt="iPhone 13"
+                  className="w-full h-full object-contain animate-rotate3d drop-shadow-2xl"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent blur-3xl -z-10" />
+              </div>
             </div>
           </div>
         </div>
