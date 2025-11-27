@@ -98,8 +98,8 @@ export default function Index() {
       {showWelcome && (
         <div className={`fixed inset-0 z-[100] flex items-center justify-center bg-background/80 backdrop-blur-sm transition-opacity duration-500 ${fadeOut ? 'opacity-0' : 'opacity-100 animate-fade-in'}`}>
           <div className={`bg-card border border-primary/50 rounded-2xl p-8 max-w-md mx-4 shadow-2xl shadow-primary/20 transition-all duration-500 ${fadeOut ? 'opacity-0 scale-95' : 'opacity-100 animate-slide-up'}`}>
-            <p className="text-2xl md:text-3xl font-bold text-center leading-relaxed">
-              Пока Адам искушается Яблоком, - <span className="text-primary">Я им владею</span>
+            <p className="text-2xl md:text-3xl font-bold text-center leading-relaxed glass-text">
+              Пока Адам искушается Яблоком, - <span className="text-primary glass-text">Я им владею</span>
             </p>
           </div>
         </div>
@@ -109,7 +109,7 @@ export default function Index() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Icon name="Smartphone" className="text-primary" size={28} />
-              <h1 className="text-2xl font-bold">iPhone Юрга</h1>
+              <h1 className="text-2xl font-bold glass-text">iPhone Юрга</h1>
             </div>
             <nav className="hidden md:flex gap-6">
               <a href="#catalog" className="text-sm hover:text-primary transition-colors">Каталог</a>
@@ -136,9 +136,9 @@ export default function Index() {
               <Badge className="mb-4 bg-primary/20 text-primary border-primary/30">
                 Официальный магазин в Юрге
               </Badge>
-              <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+              <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight glass-text">
                 Новые и б/у iPhone<br />
-                <span className="text-primary">с гарантией</span>
+                <span className="text-primary glass-text">с гарантией</span>
               </h2>
               <p className="text-xl text-muted-foreground mb-8">
                 Широкий выбор iPhone всех моделей. Trade-in вашего старого устройства. Доставка по Юрге бесплатно.
@@ -178,14 +178,14 @@ export default function Index() {
                   <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
                     <Icon name={item.icon} className="text-primary" size={28} />
                   </div>
-                  <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
+                  <h3 className="font-semibold text-lg mb-2 glass-text">{item.title}</h3>
                   <p className="text-sm text-muted-foreground">{item.desc}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
 
-          <h2 className="text-3xl font-bold mb-8">Каталог iPhone</h2>
+          <h2 className="text-3xl font-bold mb-8 glass-text">Каталог iPhone</h2>
           
           <Tabs value={activeTab} onValueChange={setActiveTab} className="mb-8">
             <TabsList className="grid w-full max-w-md grid-cols-3">
@@ -209,7 +209,7 @@ export default function Index() {
                   </Badge>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="font-semibold text-xl mb-2">{product.name}</h3>
+                  <h3 className="font-semibold text-xl mb-2 glass-text">{product.name}</h3>
                   <div className="flex items-center gap-2 mb-3 text-sm text-muted-foreground">
                     <span>{product.storage}</span>
                     <span>•</span>
@@ -247,7 +247,7 @@ export default function Index() {
               <Badge className="mb-4 bg-primary/20 text-primary border-primary/30">
                 Trade-in программа
               </Badge>
-              <h2 className="text-3xl font-bold mb-4">Обменяйте старый iPhone</h2>
+              <h2 className="text-3xl font-bold mb-4 glass-text">Обменяйте старый iPhone</h2>
               <p className="text-muted-foreground">
                 Получите до 50 000 ₽ за ваш iPhone в зачет покупки нового
               </p>
@@ -313,12 +313,12 @@ export default function Index() {
       <section id="contacts" className="py-16 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-12 text-center">Контакты</h2>
+            <h2 className="text-3xl font-bold mb-12 text-center glass-text">Контакты</h2>
             
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="border-border/50">
                 <CardContent className="p-8">
-                  <h3 className="text-xl font-semibold mb-6">Магазин в Юрге</h3>
+                  <h3 className="text-xl font-semibold mb-6 glass-text">Магазин в Юрге</h3>
                   <div className="space-y-4">
                     <div className="flex gap-4">
                       <Icon name="MapPin" className="text-primary flex-shrink-0" size={24} />
@@ -373,7 +373,7 @@ export default function Index() {
 
               <Card className="border-border/50">
                 <CardContent className="p-8">
-                  <h3 className="text-xl font-semibold mb-6">Напишите нам</h3>
+                  <h3 className="text-xl font-semibold mb-6 glass-text">Напишите нам</h3>
                   <form className="space-y-4">
                     <div>
                       <input 

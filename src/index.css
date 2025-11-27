@@ -113,3 +113,64 @@
 .animate-rotate3d {
   animation: rotate3d 8s linear infinite;
 }
+
+.glass-text {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 255, 255, 0.7) 50%,
+    rgba(255, 255, 255, 0.9) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow:
+    0 0 20px rgba(0, 113, 227, 0.3),
+    0 0 40px rgba(0, 113, 227, 0.2);
+  position: relative;
+}
+
+.glass-text::before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 113, 227, 0.4) 0%,
+    rgba(0, 113, 227, 0.1) 50%,
+    rgba(0, 113, 227, 0.4) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: blur(8px);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+button,
+label {
+  backdrop-filter: blur(10px);
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.1),
+    0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 8px 32px 0 rgba(0, 0, 0, 0.37),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.1);
+}
